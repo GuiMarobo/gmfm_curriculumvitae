@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.container{
+    display: flex;
+    flex: 1;
+    max-width: 2000px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    min-height: 100vh;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.sidebar{
+    background: #212f3d;
+    color: #fff;
+    padding: 20px;
+    flex-direction: column;
+    width: 25%;
+    box-sizing: border-box;
+    border-right: 2px solid #97260adc;
+}
+
+.fotoperfil img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.ligacoes {
+    margin-top: 370px;
+}
+
+.ligacoes a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.4em;
+    text-align: center;
+    color: #97260adc;
+}
+
+h3 {
+    font-size: 1.2em;
+    margin-top: 20px;
+    border-bottom: 1px solid #97260adc;
+    padding-bottom: 3px;
+
+}
+
+h4 {
+    font-size: 1.2em;
+    margin: 10px 0 5px
+}
+
+.main-content {
+    padding: 20px;
+    flex: 1;
+    box-sizing: border-box;
+    padding-left: 40px;
+    gap: 20px;
+}
+
+.section{
+    flex: 1;
+    margin-bottom: 20px;
+    padding-left: 40px;
+}
+
+.basicas_Info {
+    margin-top: 20px;
+}
+
+.escolaridade_Info, .certificados_Info, .exp_Info{
+    margin-bottom: 20px;
+    margin: 30px 0;
+    margin-top: 10px;
+    flex-direction: column;
+}
+
+.escolaridade_Info span, .certificados_Info span, .exp_Info span{
+    display: block;
+    color: #555;
+}
+
+.escolaridade, .certificados, .exp{
+    margin-bottom: 10px;
+    padding-left: 40px;
+}
+
+.footer {
+    background-color: #212f3d;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    box-shadow: 0 -1px 5px rgba(0,0,0,0.1);
+    width: calc(100% - 920px);
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateX(-303px);
+    flex-shrink: 0;
+
+}
+
