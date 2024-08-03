@@ -1,16 +1,14 @@
-* {
+html, body {
+    height: 100%;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-
-body{
+    font-size: 16px;
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     background: #f4f4f4;
-    min-height: 100vh;
+    overflow: hidden;
+}
+
+body {
     display: flex;
     flex-direction: column;
 }
@@ -18,41 +16,41 @@ body{
 .wrapper {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    height: 100%;
 }
 
-.container{
+.container {
     display: flex;
     flex: 1;
-    max-width: 2000px;
+    max-width: 1200px; /* Ajuste para tamanhos de tela maiores */
     margin: 0 auto;
     background: #fff;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    min-height: 100vh;
     height: 100%;
-    flex-wrap: wrap;
 }
 
-.sidebar{
+.sidebar {
     background: #212f3d;
     color: #fff;
     padding: 20px;
-    flex-direction: column;
-    width: 25%;
+    width: 100%; /* Ocupa toda a largura em telas pequenas */
+    max-width: 300px; /* Largura máxima da sidebar */
     box-sizing: border-box;
     border-right: 2px solid #97260adc;
+    display: flex;
+    flex-direction: column;
 }
 
-.fotoperfil img{
+.fotoperfil img {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 100px; /* Ajusta o tamanho da imagem */
+    height: 100px;
     display: block;
     margin: 0 auto 10px;
 }
 
 .ligacoes {
-    margin-top: 370px;
+    margin-top: auto;
 }
 
 .ligacoes a {
@@ -61,77 +59,68 @@ body{
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 1.5em;
     text-align: center;
-}
-
-h2 {
-    font-size: 1.4em;
-    text-align: center;
-    color: #97260adc;
+    margin: 0;
 }
 
 h3 {
-    font-size: 1.2em;
+    font-size: 1em;
     margin-top: 20px;
     border-bottom: 1px solid #97260adc;
     padding-bottom: 3px;
-
 }
 
 h4 {
-    font-size: 1.2em;
-    margin: 10px 0 5px
+    font-size: 1em;
+    margin: 10px 0 5px;
 }
 
 .main-content {
     padding: 20px;
     flex: 1;
     box-sizing: border-box;
-    padding-left: 40px;
-    gap: 20px;
+    padding-left: 20px;
 }
 
-.section{
-    flex: 1;
+.escolaridade, .certificados, .exp {
     margin-bottom: 20px;
-    padding-left: 40px;
+}
+.escolaridade_Info, .certificados_Info, .exp_Info {
+    margin-bottom: 10px;
 }
 
-.basicas_Info {
+.basicas_Info{
     margin-top: 20px;
 }
 
-.escolaridade_Info, .certificados_Info, .exp_Info{
-    margin-bottom: 20px;
-    margin: 30px 0;
-    margin-top: 10px;
-    flex-direction: column;
-}
-
-.escolaridade_Info span, .certificados_Info span, .exp_Info span{
+.escolaridade_Info span, .certificados_Info span, .exp_Info span {
     display: block;
     color: #555;
 }
 
-.escolaridade, .certificados, .exp{
-    margin-bottom: 10px;
-    padding-left: 40px;
+/* Media Queries para telas menores */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        max-width: none;
+        border-right: none;
+        border-top: 2px solid #97260adc;
+    }
+    
+    .main-content {
+        padding-left: 10px;
+    }
+
+    .section {
+        padding-left: 10px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    h3, h4 {
+        font-size: 0.9em;
+    }
 }
-
-.footer {
-    background-color: #212f3d;
-    color: #fff;
-    text-align: center;
-    padding: 10px 20px;
-    box-shadow: 0 -1px 5px rgba(0,0,0,0.1);
-    width: calc(100% - 920px);
-    box-sizing: border-box;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transform: translateX(-303px);
-    flex-shrink: 0;
-
-}
-
